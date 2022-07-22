@@ -4,8 +4,8 @@ export class User {
     public name: string;
     public email: string;
     public password: string;
-    public created_at: Date;
-    public updated_at: Date;
+    public created_at?: Date;
+    public updated_at?: Date;
 
     constructor(props: Omit<User, 'id'| 'created_at'| 'updated_at'>, id?: string) {
         Object.assign(this, props);

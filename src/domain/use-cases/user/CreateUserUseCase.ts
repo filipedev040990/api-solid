@@ -6,7 +6,7 @@ export class CreateUserUseCase {
     constructor(
         private userRepository: IUserRepository
     ){}
-    async execute(data: ICreateUser): Promise<User> {
+    async execute(data: ICreateUser): Promise<void> {
        
         const userExists = await this.userRepository.findByEmail(data.email);
         if(userExists) {
@@ -14,6 +14,6 @@ export class CreateUserUseCase {
         }
 
         const newUser = new User(data);
-        return await this.userRepository.save(newUser);
+        await this.userRepository.save(newUser);
     }
 }
