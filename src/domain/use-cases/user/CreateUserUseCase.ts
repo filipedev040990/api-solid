@@ -1,6 +1,7 @@
 import { ICreateUser } from './ICreateUser';
 import { User } from './../../entities/User';
 import { IUserRepository } from './../../repositories/IUserRepository';
+
 export class CreateUserUseCase {
     constructor(
         private userRepository: IUserRepository
