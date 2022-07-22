@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateUserUseCase } from "./CreateUserUseCase";
+import { CreateUserUseCase } from "../../domain/use-cases/user/CreateUserUseCase";
 import { hashSync } from 'bcryptjs';
 
 export class CreateUserController {

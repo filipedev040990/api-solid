@@ -1,4 +1,4 @@
-import { CreateUserController } from './CreateUserController';
+import { CreateUserController } from '../../../infra/controllers/CreateUserController';
 import { CreateUserUseCase } from './CreateUserUseCase';
 import { LocalRepository } from './../../repositories/LocalRepository';
 
